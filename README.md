@@ -1,11 +1,14 @@
 ![](bingo-gin.jpg)
+
+```
    ___ _                               _       
   / __(_)_ __   __ _  ___         __ _(_)_ __  
  /__\// | '_ \ / _` |/ _ \ _____ / _` | | '_ \ 
 / \/  \ | | | | (_| | (_) |_____| (_| | | | | |
 \_____/_|_| |_|\__, |\___/       \__, |_|_| |_|
-               |___/             |___/        
-               
+               |___/             |___/         
+```
+              
  ![Travis](https://img.shields.io/badge/build-passing-brightgreen.svg) 
  ![Travis](https://img.shields.io/badge/language-golang-blue.svg) 
  ![Travis](https://img.shields.io/badge/godoc-reference-blue.svg) 
