@@ -11,4 +11,5 @@ func init() {
 	starters.Register(&base.PropsStarter{})
 	starters.Register(&base.LogStarter{})
 	starters.Register(&base.JsonBaseStarter{})
+	starters.Register(&base.DbxDataBaseStarter{})
 }

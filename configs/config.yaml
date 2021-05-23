@@ -13,8 +13,11 @@ log:
 http:
   develop:
     listen_port: ':8080'
+  release:
+    listen_port: ':80'
 
 mysql:
+  database: 'bingo'
   develop:
     port: '3306'
     host: '127.0.0.1'
