@@ -33,6 +33,7 @@ func (c *context) Log(kv ...interface{}) error {
 		// bind Value
 		bindValues(kvs)
 	}
+	kvs = append(kvs, kv...)
 
 	for _,l := range c.logs {
 		if err := l.Log(kvs...); err != nil {
