@@ -31,7 +31,6 @@ func UpdateUserById(ctx context.Context, client *ent.Client, id int, age int, na
 }
 
 
-
 func QueryUserById(ctx context.Context, client *ent.Client, id int) ([]*ent.User, error) {
 	u, err := client.User.
 		Query().

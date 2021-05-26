@@ -5,6 +5,8 @@ import (
 	"reflect"
 	"github.com/blackbinbinbinbin/Bingo-gin/internal/log"
 	"fmt"
+	"os/signal"
+	"os"
 )
 
 /**
@@ -91,4 +93,30 @@ func (b *BootApplication) start() {
 			starter.Start(b.starterCtx)
 		}
 	}
+}
+
+
+// 结束
+func (b *BootApplication) Stop() {
+	defer func() {
+		if err := recover(); err != nil {
+			log.Info(logger).Log("err", err)
+		}
+	}()
+
+
+	signalChan := make(chan os.Signal)
+	signal.Notify(signalChan, os.Interrupt)
+	sig := <-signalChan
+	log.Info(logger).Log("msg", fmt.Sprintf("Get Signal:%s", sig))
+	log.Info(logger).Log("msg", "Shutdown Server ...")
+
+
+	log.Info(logger).Log("msg", "Stopping starters...")
+	// 按顺序结束
+	allStarters := GetStarters()
+	for _, starter := range allStarters {
+		starter.Stop(b.starterCtx)
+	}
+	return
 }

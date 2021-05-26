@@ -1,4 +1,4 @@
-package base
+package validator
 
 import (
 	"github.com/go-playground/locales/zh"

@@ -1,4 +1,4 @@
-package base
+package json
 
 import (
 	"github.com/json-iterator/go"

@@ -1,0 +1,22 @@
+syntax = "proto3";
+package bingogin.api;
+
+option go_package = "/;conf";
+
+import "google/protobuf/duration.proto";
+
+
+message Data {
+  message Database {
+    string driver = 1;
+    string source = 2;
+  }
+  message Redis {
+    string network = 1;
+    string addr = 2;
+    google.protobuf.Duration read_timeout = 3;
+    google.protobuf.Duration write_timeout = 4;
+  }
+  Database database = 1;
+  Redis redis = 2;
+}

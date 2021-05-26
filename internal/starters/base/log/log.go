@@ -1,4 +1,4 @@
-package base
+package log
 
 import (
 	"github.com/blackbinbinbinbin/Bingo-gin/internal/log"

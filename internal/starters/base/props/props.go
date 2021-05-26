@@ -1,4 +1,4 @@
-package base
+package props
 
 import (
 	"github.com/tietang/props/v3/kvs"
